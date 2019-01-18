@@ -3,6 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <dependencies>
+        <dependency>
+            <groupId>com.github</groupId>
+            <artifactId>demo-v1</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
     <parent>
         <groupId>com.github</groupId>
@@ -14,5 +21,31 @@
     <artifactId>service-v1</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>sofa-ark-plugin-maven-plugin</artifactId>
+                <version>0.6.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <id>default-cli</id>
+                        <goals>
+                            <goal>ark-plugin</goal>
+                        </goals>
+
+                        <configuration>
+                            <!-- configure exported class -->
+                            <exported>
+                                <!-- configure class-level exported class -->
+                                <classes>
+                                    <class>com.github.demo.MyServiceV1</class>
+                                </classes>
+                            </exported>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
