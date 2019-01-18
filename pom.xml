@@ -13,6 +13,7 @@
         <module>demo-v2</module>
         <module>service-v1</module>
         <module>service-v2</module>
+        <module>business</module>
     </modules>
 
     <properties>
