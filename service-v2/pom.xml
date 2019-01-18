@@ -43,6 +43,9 @@
                         </goals>
 
                         <configuration>
+                            <!--can only configure no more than one activator-->
+                            <activator>com.github.demo.MyPluginActivatorV2</activator>
+
                             <!-- configure exported class -->
                             <exported>
                                 <!-- configure class-level exported class -->

@@ -11,11 +11,11 @@ import com.alipay.sofa.ark.spi.service.PluginActivator;
  * @author qilong.zql
  * @since 0.1.0
  */
-public class MyPluginActivator implements PluginActivator{
+public class MyPluginActivatorV1 implements PluginActivator{
 
     public void start(PluginContext context) throws ArkException {
         System.out.println("starting in sample ark plugin activator");
-        context.publishService(MyServiceV2.class, new MyServiceV2());
+        context.publishService(MyServiceV1.class, new MyServiceV1());
     }
 
     public void stop(PluginContext context) throws ArkException {
